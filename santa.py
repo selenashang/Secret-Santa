@@ -1,5 +1,6 @@
 import random
 import os
+import sys
 
 def assign(players, gifts):
     """
@@ -21,16 +22,17 @@ i=0
 for player in players:
     participant_dictionary[player] = gifts[i]
     i+=1
+try:
+    assignments = assign(players, gifts)
+    while True:
+        player = raw_input("What's your name?\n").lower()
+        while player not in players:
+            player = raw_input("You misspelled your name lol. Try again.\n").lower()
 
-assignments = assign(players, gifts)
-while True:
-    player = raw_input("What's your name?\n").lower()
-    while player not in players:
-        player = raw_input("You misspelled your name lol. Try again.\n").lower()
-
-    print("You're assigned to " + assignments[player].capitalize() + " and he/she/xhe wants " + participant_dictionary[assignments[player]] +".")
-    if raw_input("\nPress enter to clear screen or 'q' to quit\n") == 'q':
-        exit()
-    os.system("clear")
-
-
+        print("You're assigned to " + assignments[player].capitalize() + " and he/she/xhe wants " + participant_dictionary[assignments[player]] +".")
+        if raw_input("\nPress any key to clear screen or q to quit\n") == 'q':
+            print "Have fun!"
+            exit()
+        os.system("clear")
+except IndexError:
+    pass
