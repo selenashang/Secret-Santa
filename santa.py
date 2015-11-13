@@ -25,11 +25,9 @@ for player in players:
 assignments = assign(players, gifts)
 while True:
     player = raw_input("What's your name?\n").lower()
-    if player not in players:
+    while player not in players:
         player = raw_input("You misspelled your name lol. Try again.\n").lower()
 
-    if player == "q":
-        exit()
     print("You're assigned to " + assignments[player].capitalize() + " and he/she/xhe wants " + participant_dictionary[assignments[player]] +".")
     if raw_input("\nPress enter to clear screen or 'q' to quit\n") == 'q':
         exit()
