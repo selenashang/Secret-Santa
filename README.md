@@ -3,8 +3,8 @@ A script that allows the randomization of a Secret Santa game
 
 1) Create a file called ```players.txt```.
 
-2) Add player names & what they want in the format of ```name: gift```.
+2) Add player names & what they want in the format of ```name: gift```. Make sure that there aren't any extra lines at the bottom of the file.
 
-3) Run ```python santa.py```. Make sure ```players.txt``` and ```santa.py``` are in the same directory.
+3) Run ```python santa.py``` (with ```players.txt``` in the same directory).
 
 4) Go start your Christmas shopping!
