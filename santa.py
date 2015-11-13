@@ -36,4 +36,3 @@ while True:
     os.system("clear")
 
 
-
