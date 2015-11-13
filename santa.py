@@ -14,13 +14,15 @@ def assign(players):
     return secret_santas
 
 
-players = [player.strip() for player in open("players.txt")]
+players = [player.strip().lower() for player in open("players.txt")]
 assignments = assign(players)
 while True:
-    player = input("What's your name?\n")
+    player = raw_input("What's your name?\n").lower()
     if player == "q":
         exit()
-    print("You're assigned to " + assignments[player])
-    if input("\nPress enter to clear screen\n") == 'q':
+    print("You're assigned to " + assignments[player].capitalize() + ".")
+    if raw_input("\nPress enter to clear screen or 'q' to quit\n") == 'q':
         exit()
     os.system("clear")
+
+
