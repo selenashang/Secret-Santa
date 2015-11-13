@@ -1,5 +1,7 @@
 # Secret-Santa
-A script that allows the randomization of a Secret Santa game
+A script that allows the randomization of a Secret Santa game. After use, a file called ```secret_santa.txt``` is automatically created so that you won't forget who is assigned to who.
+
+***Instructions***
 
 1) Create a file called ```players.txt```.
 
